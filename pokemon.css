@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #ca22bc  linear-gradient(0deg, #ca22bc 0%,#dceaf1 50%, #e8cb0c 100%) no-repeat;
+  }
+
+  section{
+    text-align: center;
+  }
+  .logo {
+    width: 180px;
+  }
+form input{
+  width: 20%;
+  padding: 0.5rem;
+}
+button.btn{
+  padding: 0.5rem;
+  background-color: #7417de;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+}
+button.btn:hover{
+  background-color: rgb(172,76,231);
+}
+
+.pokeball {
+  max-width: 200px;
+  margin: 2rem;
+  animation: loadingEffect 1s infinite;
+}
+@keyframes loadingEffect{
+  0%{
+    transform: rotate(0) scale(0.5);
+  }100%{
+    transform: rotate(360deg) scale(1);
+  }
+}
+.d-none{
+  display: none;
+}
+
+.pokebox{
+  background-color: #fff;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.result{
+  width: 400px;
+  height: 300px;
+  margin: 1.2rem auto;
+}
+.closebox{
+  position: absolute;
+  right: 0.15em;
+  top: 0;
+  font-size: 1.2em;
+}
+.pokebox .pokemon{
+  margin-bottom: 1rem;
+  width: 200px;
+  height: 200px;
+}
+.pokename{
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+}
+.pokebox::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 270px;
+  background: linear-gradient(to top, #d5bd0b, #e6a7f1, #8b0bed); 
+z-index: -1;
+top: 0;
+clip-path: circle(400px at 50% -48.5%);
+}
+
+.closebox{
+  cursor: pointer;
+}
+
+.pokebox.notfound img{
+  max-width:90px;
+}
+.pokebox.notfound span.pokenumber{
+  color: red;
+}
+@media (max-width:410px){
+  .result{
+    width: 95%;
+    height: auto;
+  }
+}

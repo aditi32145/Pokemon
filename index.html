@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pokemon-info</title>
+  <link rel="stylesheet" href="pokemon.css" />
+  <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+    <section>
+      <img src="images/logo.png" alt="logo" class="logo">
+
+      <form role="search">
+<input type="text" id="search" placeholder="Enter Pokemon name or ID">
+<button class="btn" type="submit">Search</button>
+<button class="btn btn-random" type="button">Get Lucky!</button>
+      </form>
+      <div class="loading d-none">
+        <img src="images/loader.png" alt="pokeball" class="pokeball">
+      </div>
+      <div class="result">
+        <!-- <div class="pokebox">
+          <span class="closebox">&#10008;</span>
+          <img src="images/pokemon.webp" alt="pikachu" class="pokemon">
+          <h3 class="pokename">pikachu</h3>
+          <p class="pokenumber"> #0025</p>
+        </div> -->
+      </div>
+    </section>
+</body>
+<script src="pokemon.js"></script>
+</html>
